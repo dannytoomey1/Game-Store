@@ -1,20 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import * as itemsAPI from '../../utilities/items-api';
 
 export default function NewOrderPage() {
   // If your state will ultimately be an array, ALWAYS
   // initialize to an empty array
-  const [menuItems, setMenuItems] = useState(42);
+  const [menuItems, setMenuItems] = useState([]);
+  const categoriesRef = useRef([]);
 
   useEffect(function() {
     async function getItems() {
       const items = await itemsAPI.getAll();
+      categoriesRef.current = [...new Set(items.map(item => item.category.name))];
       setMenuItems(items);
     }
     getItems();
-    return function() {
-      console.log('going bye bye');
-    }
   }, []);
   // An empty dependency array results in the effect
   // function running ONLY after the FIRST render
