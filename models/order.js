@@ -53,4 +53,19 @@ orderSchema.statics.getCart = function(userId) {
   );
 };
 
+// Instance methods are callable on the document (instance)
+orderSchema.methods.addItemToCart = async function(itemId) {
+  const cart = this;
+  // Check if the item already exists in the cart
+  const lineItem = cart.lineItems.find(lineItem => lineItem.item._id.equals(itemId));
+  if (lineItem) {
+    lineItem.qty += 1;
+  } else {
+    const item = await mongoose.model('Item').findById(itemId);
+    cart.lineItems.push({ item });
+  }
+  // return the promise that is returned by save()
+  return cart.save();
+}
+
 module.exports = mongoose.model('Order', orderSchema);
