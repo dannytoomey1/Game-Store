@@ -34,6 +34,12 @@ export default function NewOrderPage({ user, setUser }) {
   // An empty dependency array results in the effect
   // function running ONLY after the FIRST render
   
+  /*-- Event Handlers --*/
+  async function handleAddToOrder(itemId) {
+    alert(`add item: ${itemId}`);
+  }
+
+
   return (
     <main className="NewOrderPage">
       <aside>
@@ -48,6 +54,7 @@ export default function NewOrderPage({ user, setUser }) {
       </aside>
       <MenuList
         menuItems={menuItems.filter(item => item.category.name === activeCat)}
+        handleAddToOrder={handleAddToOrder}
       />
       <OrderDetail order={cart} />
     </main>
