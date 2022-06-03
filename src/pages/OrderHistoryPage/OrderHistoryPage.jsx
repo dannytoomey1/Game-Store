@@ -34,7 +34,7 @@ export default function OrderHistoryPage({ user, setUser }) {
         setSelectedOrder={setSelectedOrder}
       />
       {/* Render the existing OrderDetail component */}
-      <OrderDetail />
+      <OrderDetail order={selectedOrder} />
     </main>
   );
 }

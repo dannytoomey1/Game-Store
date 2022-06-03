@@ -11,7 +11,7 @@ module.exports = {
 
 async function forUser(req, res) {
   // get orders for the logged in user
-  const orders = await Order.find({user: req.user._id, isPaid: true});
+  const orders = await Order.find({user: req.user._id, isPaid: true}).sort('-updatedAt');
   res.json(orders);
 }
 
