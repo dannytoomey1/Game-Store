@@ -5,6 +5,7 @@ import './OrderHistoryPage.css';
 import Logo from '../../components/Logo/Logo';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
+import OrderList from '../../components/OrderList/OrderList';
 
 export default function OrderHistoryPage({ user, setUser }) {
   const [orders, setOrders] = useState([]);
@@ -14,6 +15,7 @@ export default function OrderHistoryPage({ user, setUser }) {
     async function getOrders() {
       const orders = await ordersAPI.getAllForUser();
       setOrders(orders);
+      setSelectedOrder(orders[0]);
     }
     getOrders();
   }, []);
@@ -26,7 +28,11 @@ export default function OrderHistoryPage({ user, setUser }) {
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       {/* Render an OrderList component (needs to be coded) */}
-
+      <OrderList
+        orders={orders}
+        selectedOrder={selectedOrder}
+        setSelectedOrder={setSelectedOrder}
+      />
       {/* Render the existing OrderDetail component */}
       <OrderDetail />
     </main>
