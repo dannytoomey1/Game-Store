@@ -1,4 +1,4 @@
-# MERN-Stack Infrastructure
+# Game-Store
 
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
+https://trello.com/b/A7qg3Cwv/game-store
 
