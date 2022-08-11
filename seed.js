@@ -21,7 +21,7 @@ const Platform = require('./models/platform');
   ]);
 
   await Platform.deleteMany({});
-  const platforms = await platform.create([
+  const platforms = await Platform.create([
     {name: 'PC', sortOrder: 10},
     {name: 'PS4', sortOrder: 20},
     {name: 'Switch', sortOrder: 30},
@@ -34,7 +34,7 @@ const Platform = require('./models/platform');
     {name: 'Xbox', sortOrder: 100},
     {name: 'PSP', sortOrder: 110},
     {name: 'PS Vita', sortOrder: 120},
-    {name: 'DS', sortOrder: 130}
+    {name: 'DS', sortOrder: 130},
     {name: '3DS', sortOrder: 140}
   ]);
 
