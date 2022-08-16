@@ -4,7 +4,6 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 
 require('dotenv').config();
-// Connect to db after the dotenv above
 require('./config/database');
 
 const app = express();
@@ -29,13 +28,14 @@ app.use('/api/games', ensureLoggedIn, require('./routes/api/games'));
 app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'));
 
 
+
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-const port = normalizePort(process.env.PORT || 3001);
+const port = process.env.PORT || 3001;
 
 app.listen(port, function() {
   console.log(`Express app running on port ${port}`);

@@ -52,7 +52,7 @@ orderSchema.methods.addGameToCart = async function(gameId) {
   if (lineGame) {
     lineGame.qty += 1;
   } else {
-    const game = await mongoose.model('Game').findById(gameId);
+    const game = await mongoose.model('game').findById(gameId);
     cart.lineGames.push({ game });
   }
   return cart.save();

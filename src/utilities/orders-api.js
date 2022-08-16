@@ -6,7 +6,6 @@ export function getCart() {
   return sendRequest(`${BASE_URL}/cart`);
 }
 
-
 export function addGameToCart(gameId) {
   return sendRequest(`${BASE_URL}/cart/games/${gameId}`, 'POST');
 }

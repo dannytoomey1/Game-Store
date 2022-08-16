@@ -5,25 +5,27 @@ import './NewOrderPage.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../../components/Logo/Logo';
 import MenuList from '../../components/MenuList/MenuList';
-import CategoryList from '../../components/CategoryList/CategoryList';
+import GenreList from '../../components/GenreList/GenreList';
+import PlatformList from '../../components/PlatformList/PlatformList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
+
 export default function NewOrderPage({ user, setUser }) {
-  // If your state will ultimately be an array, ALWAYS
-  // initialize to an empty array
   const [menuGames, setMenuGames] = useState([]);
-  const [activeCat, setActiveCat] = useState('');
+  const [activeGen, setActiveGen] = useState('');
+  const [activePlat, setActivePlat] = useState('');
   const [cart, setCart] = useState(null);
-  const categoriesRef = useRef([]);
+  const genresRef = useRef([]);
   const navigate = useNavigate();
 
   useEffect(function() {
     async function getGames() {
       const games = await gamesAPI.getAll();
-      categoriesRef.current = [...new Set(games.map(game => game.category.name))];
+      genresRef.current = [...new Set(games.map(game => game.genre.name))];
       setMenuGames(games);
-      setActiveCat(categoriesRef.current[0]);
+      setActiveGen(genresRef.current[0]);
+      setActivePlat({name: "All"});
     }
     getGames();
     async function getCart() {
@@ -32,10 +34,7 @@ export default function NewOrderPage({ user, setUser }) {
     }
     getCart();
   }, []);
-  // An empty dependency array results in the effect
-  // function running ONLY after the FIRST render
-  
-  /*-- Event Handlers --*/
+
   async function handleAddToOrder(gameId) {
     const cart = await ordersAPI.addGameToCart(gameId);
     setCart(cart);
@@ -48,7 +47,6 @@ export default function NewOrderPage({ user, setUser }) {
 
   async function handleCheckout() {
     await ordersAPI.checkout();
-    // programatically change client-side routes
     navigate('/orders');
   }
 
@@ -56,16 +54,20 @@ export default function NewOrderPage({ user, setUser }) {
     <main className="NewOrderPage">
       <aside>
         <Logo />
-        <CategoryList
-          categories={categoriesRef.current}
-          activeCat={activeCat}
-          setActiveCat={setActiveCat}
+        <GenreList
+          genres={genresRef.current}
+          activeGen={activeGen}
+          setActiveGen={setActiveGen}
+        />
+        <PlatformList
+          activePlat={activePlat}
+          setActivePlat={setActivePlat}
         />
         <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       <MenuList
-        menuGames={menuGames.filter(game => game.category.name === activeCat)}
+        menuGames={menuGames.filter(game => game.genre.name === activeGen).filter(game => game.platforms.includes(activePlat.name))}
         handleAddToOrder={handleAddToOrder}
       />
       <OrderDetail

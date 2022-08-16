@@ -1,8 +1,7 @@
 .MenuListGame {
   width: 100%;
-  display: flex;
+  
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 3vmin;
   padding: 2vmin;
   color: var(--text-light);
@@ -13,6 +12,7 @@
 }
 
 .MenuListGame .emoji {
+  align-items: center;
   height: 8vw;
   width: 8vw;
   font-size: 4vw;
@@ -22,19 +22,28 @@
 }
 
 .MenuListGame .buy {
+  align-items: center;
   display: flex;
   flex-direction: column;
 }
 
 .MenuListGame .buy span {
+  align-items: center;
   font-size: 1.7vw;
   text-align: center;
   color: var(--text-light);
 }
 
 .MenuListGame .name {
+  align-items: center;
   font-size: 2vw;
   text-align: center;
   color: var(--text-light);
+}
+
+.MenuListGame .details {
+  display: flex;
+  flex-direction: row;
+  align-items: bottom;
 }
 

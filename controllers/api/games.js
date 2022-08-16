@@ -15,3 +15,4 @@ async function show(req, res) {
   const game = await Game.findById(req.params.id);
   res.json(game);
 }
+
