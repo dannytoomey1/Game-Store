@@ -1,9 +1,10 @@
-import OrderListItem from '../OrderListItem/OrderListItem';
+import React, { } from 'react';
+import OrderListGame from '../OrderListGame/OrderListGame';
 import './OrderList.css';
 
 export default function OrderList({ orders, selectedOrder, setSelectedOrder }) {
-  const orderListItems = orders.map(o =>
-    <OrderListItem
+  const orderListGames = orders.map(o =>
+    <OrderListGame
       order={o}
       isSelected={o === selectedOrder}
       setSelectedOrder={setSelectedOrder}
@@ -12,7 +13,7 @@ export default function OrderList({ orders, selectedOrder, setSelectedOrder }) {
   );
   return (
     <main className="OrderList">
-      {orderListItems}
+      {orderListGames}
     </main>
   );
 }

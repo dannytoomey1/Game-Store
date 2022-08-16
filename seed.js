@@ -45,7 +45,7 @@ const Platform = require('./models/platform');
     {name: 'Persona 3', platforms: [platforms[8], platforms[10]], genre: genres[2], price: 14.99, developer: "Atlus"},
     {name: 'The Elder Scrolls III: Morrowind', platforms: [platforms[0], platforms[9]], genre: genres[1], price: 14.99, developer: "Bethesda"},
     {name: 'The Elder Scrolls IV: Oblivion', platforms: [platforms[0], platforms[5], platforms[4]], genre: genres[1], price: 19.99, developer: "Bethesda"},
-    {name: 'The Elder Scrolls V: Skyrim', platforms: [platforms[0], platforms[5], platforms[4], platforms[1], platforms[3], platforms[2]], genre: genres[1], price: 39.99, developer: "Bethesda"},
+    {name: 'The Elder Scrolls V: Skyrim', platforms: [platforms[0], platforms[4], platforms[5], platforms[1], platforms[3], platforms[2]], genre: genres[1], price: 39.99, developer: "Bethesda"},
     {name: 'Persona 5', platforms: [platforms[1], platforms[4]], genre: genres[2], price: 14.99, developer: "Atlus"},
     {name: 'Mass Effect', platforms: [platforms[0], platforms[5], platforms[4]], genre: genres[1], price: 19.99, developer: "Bioware"},
     {name: 'Mass Effect 2', platforms: [platforms[0], platforms[5], platforms[4]], genre: genres[1], price: 19.99, developer: "Bioware"},

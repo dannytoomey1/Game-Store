@@ -1,3 +1,4 @@
+import React, {} from 'react';
 import './UserLogOut.css';
 import { logOut } from '../../utilities/users-service';
 

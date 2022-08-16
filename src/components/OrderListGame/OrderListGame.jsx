@@ -1,9 +1,10 @@
-import './OrderListItem.css';
+import React, { } from 'react';
+import './OrderListGame.css';
 
-export default function OrderListItem({ order, isSelected, setSelectedOrder }) {
+export default function OrderListGame({ order, isSelected, setSelectedOrder }) {
   return (
     <div
-      className={`OrderListItem${isSelected ? ' selected' : ''}`}
+      className={`OrderListGame${isSelected ? ' selected' : ''}`}
       onClick={() => setSelectedOrder(order)}
     >
       <div>
@@ -12,7 +13,7 @@ export default function OrderListItem({ order, isSelected, setSelectedOrder }) {
       </div>
       <div className="align-rt">
         <div>${order.orderTotal.toFixed(2)}</div>
-        <div className="smaller">{order.totalQty} Item{order.totalQty > 1 && 's'}</div>
+        <div className="smaller">{order.totalQty} Game{order.totalQty > 1 && 's'}</div>
       </div>
     </div>
   );

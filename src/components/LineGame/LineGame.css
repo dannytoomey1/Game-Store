@@ -1,4 +1,4 @@
-.LineItem {
+.LineGame {
   width: 100%;
   display: grid;
   grid-template-columns: 3vw 15.35vw 5.75vw 5.25vw;
@@ -9,25 +9,25 @@
   font-size: 1.5vw;
 }
 
-.LineItem:last-child {
+.LineGame:last-child {
   border-bottom: .1vmin solid var(--tan-3);
 }
 
-.LineItem .qty {
+.LineGame .qty {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.3vw;
 }
 
-.LineItem .ext-price {
+.LineGame .ext-price {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   font-size: 1.3vw;
 }
 
-.LineItem button {
+.LineGame button {
   margin: 0;
 }
 

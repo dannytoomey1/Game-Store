@@ -1,17 +1,18 @@
+import React, { } from 'react';
 import './MenuList.css';
-import MenuListItem from '../MenuListItem/MenuListItem';
+import MenuListGame from '../MenuListGame/MenuListGame';
 
-export default function MenuList({ menuItems, handleAddToOrder }) {
-  const items = menuItems.map(item =>
-    <MenuListItem
-      key={item._id}
-      menuItem={item}
+export default function MenuList({ menuGames, handleAddToOrder }) {
+  const games = menuGames.map(game =>
+    <MenuListGame
+      key={game._id}
+      menuGame={game}
       handleAddToOrder={handleAddToOrder}
     />
   );
   return (
     <main className="MenuList">
-      {items}
+      {games}
     </main>
   );
 }
