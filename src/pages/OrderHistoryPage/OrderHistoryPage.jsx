@@ -27,13 +27,11 @@ export default function OrderHistoryPage({ user, setUser }) {
         <Link to="/orders/new" className="button btn-sm">NEW ORDER</Link>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
-      {/* Render an OrderList component (needs to be coded) */}
       <OrderList
         orders={orders}
         selectedOrder={selectedOrder}
         setSelectedOrder={setSelectedOrder}
       />
-      {/* Render the existing OrderDetail component */}
       <OrderDetail order={selectedOrder} />
     </main>
   );

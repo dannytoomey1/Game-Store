@@ -3,7 +3,6 @@ require('./config/database');
 
 const Genre = require('./models/genre');
 const Game = require('./models/game');
-const Platform = require('./models/platform');
 
 (async function() {
 
@@ -49,7 +48,5 @@ const Platform = require('./models/platform');
   ]);
 
   console.log(games)
-
   process.exit();
-
 })();
