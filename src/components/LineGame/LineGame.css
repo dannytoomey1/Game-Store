@@ -1,7 +1,7 @@
 .LineGame {
   width: 100%;
   display: grid;
-  grid-template-columns: 12vw 6vw 5.75vw 5.25vw;
+  grid-template-columns: 14vw 4vw 10.9vw 2vw;
   padding: 1vmin 0;
   color: black;
   background-color: var(--white);

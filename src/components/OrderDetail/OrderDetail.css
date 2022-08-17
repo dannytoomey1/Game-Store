@@ -8,7 +8,11 @@
 }
 
 .OrderDetail .section-heading {
-  width: 100%
+  width: 100%;
+  border-width: 1px;
+  border: solid black;
+  color: white;
+  background-color: red;
 }
 
 .OrderDetail .line-item-container {
@@ -22,9 +26,8 @@
   width: 100%;
   display: grid;
   grid-template-columns: 18.35vw 5.75vw 5.25vw;
-  padding: 1vmin 0;
-  color: var(--text-light);
-  border-top: .1vmin solid var(--tan-3);
+  padding: 2vmin 0;
+  border-top: .1vmin solid red;
 }
 
 .OrderDetail .total span {
@@ -32,7 +35,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.5vw;
-  color: var(--text-dark);
+  color: red;
 }
 
 .OrderDetail .total span.right {
@@ -41,7 +44,8 @@
 }
 
 .OrderDetail .hungry {
-  position: absolute;
+  position: center;
   top: 50vh;
-  font-size: 2vmin;
+  font-size: 15vmin;
+  color: gray;
 }

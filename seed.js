@@ -19,8 +19,6 @@ const Game = require('./models/game');
     {name: 'Visual Novel', sortOrder: 90}
   ]);
 
-  
-
   await Game.deleteMany({});
   const games = await Game.create([
     {name: 'Super Smash Bros Melee', platforms: ["Gamecube", "All"], genre: genres[6], price: 69.99, developer: "Nintendo", image: "", image: "https://upload.wikimedia.org/wikipedia/en/7/75/Super_Smash_Bros_Melee_box_art.png"},
@@ -44,7 +42,29 @@ const Game = require('./models/game');
     {name: 'Crulety Squad', platforms: ["PC", "All"], genre: genres[7], price: 19.99, developer: "Consumer Softproducts", image: "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/abb687286af099b8822bd546213dc79c.jpg"},
     {name: 'Phoenix Wright: Ace Attorney', platforms: ["DS", "3DS", "PC", "Switch", "All"], genre: genres[8], price: 14.99, developer: "Capcom", image: "https://upload.wikimedia.org/wikipedia/en/7/73/Phoenix_Wright_-_Ace_Attorney_Coverart.png"},
     {name: 'Danganronpa', platforms: ["PS Vita", "PSP", "PC", "PS4", "Switch", "All"], genre: genres[8], price: 19.99, developer: "Spike Chunsoft", image: "https://howlongtobeat.com/games/Danganronpaboxart.jpg"},
-    {name: 'Yakuza 6', platforms: ["PS4", "Xbox One", "PC", "All"], genre: genres[0], price: 19.99, developer: "Ryu ga Gotoku", image: "https://m.media-amazon.com/images/I/81IhCZCA2HL._SL1500_.jpg"}
+    {name: 'Yakuza 6', platforms: ["PS4", "Xbox One", "PC", "All"], genre: genres[0], price: 19.99, developer: "Ryu ga Gotoku", image: "https://m.media-amazon.com/images/I/81IhCZCA2HL._SL1500_.jpg"},
+    {name: 'Call Of Duty 4: Modern Warfare', platforms: ["PS3", "Xbox 360", "PC", "All"], genre: genres[7], price: 19.99, developer: "Infinity Ward", image: "https://www.giantbomb.com/a/uploads/original/8/87790/1784886-box_cod4mwds.png"},
+    {name: 'Call Of Duty 5: World at War', platforms: ["PS3", "Xbox 360", "PC", "All"], genre: genres[7], price: 19.99, developer: "Treyarch", image: "https://www.mobygames.com/images/covers/l/142561-call-of-duty-world-at-war-playstation-3-front-cover.jpg"},
+    {name: 'Call Of Duty 6: Modern Warfare 2', platforms: ["PS3", "Xbox 360", "PC", "All"], genre: genres[7], price: 19.99, developer: "Infinity Ward", image: "https://art.gametdb.com/ps3/coverHQ/JA/BLJM61006.jpg"},
+    {name: 'Call Of Duty 7: Black Ops', platforms: ["PS3", "Xbox 360", "PC", "All"], genre: genres[7], price: 19.99, developer: "Treyarch", image: "https://www.mobygames.com/images/covers/l/278150-call-of-duty-black-ops-playstation-3-front-cover.jpg"},
+    {name: 'Call Of Duty 8: Modern Warfare 3', platforms: ["PS3", "Xbox 360", "PC", "Wii U", "All"], genre: genres[7], price: 19.99, developer: "Infinity Ward", image: "https://static.wikia.nocookie.net/callofduty/images/b/bf/Call_of_Duty_Modern_Warfare_3_box_art.png"},
+    {name: 'Ratchet and Clank Future: A Crack in Time', platforms: ["PS3", "All"], genre: genres[0], price: 9.99, developer: "Insomniac", image: "https://www.mobygames.com/images/covers/l/171411-ratchet-clank-future-a-crack-in-time-playstation-3-front-cover.jpg"},
+    /*{name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},
+    {name: '', platforms: ["", "All"], genre: genres[0], price: 9, developer: "", image: ""},*/
   ]);
 
   console.log(games)
