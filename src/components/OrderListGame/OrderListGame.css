@@ -5,19 +5,19 @@
   width: 100%;
   margin-bottom: 3vmin;
   padding: 2vmin;
-  color: var(--text-light);
+  color: black;
   background-color: var(--white);
   border: 0.2vmin solid var(--tan-3);
   border-radius: 1vmin;
   font-size: 2vmin;
-  cursor: pointer;
+  cursor: zoom-in;
 }
 
 .OrderListGame.selected, .OrderListGame:not(.selected):hover {
-  border-color: var(--orange);
-  border-width: 0.2vmin;
+  border-color: red;
+  border-width: .25vmin;
 }
 
 .OrderListGame.selected {
-  cursor: default;
+  cursor: zoom-out;
 }

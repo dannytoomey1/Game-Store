@@ -1,49 +1,45 @@
 .MenuListGame {
   width: 100%;
-  
   justify-content: space-between;
   margin-bottom: 3vmin;
   padding: 2vmin;
-  color: var(--text-light);
-  background-color: var(--white);
-  border: .1vmin solid var(--tan-3);
+  color: black;
+  background-color: black;
+  border: .3vmin solid red;
   border-radius: 1vmin;
   font-size: 4vmin;
 }
 
-.MenuListGame .emoji {
+.MenuListGame .image {
+  height: 700px;
+  width: 525px;
   align-items: center;
-  height: 8vw;
-  width: 8vw;
-  font-size: 4vw;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin;
 }
 
 .MenuListGame .buy {
   align-items: center;
   display: flex;
   flex-direction: column;
+  color: black;
+  background-color: white;
+  border-radius: 3vmin;
+  font-size: 2vw;
+  text-align: center;
 }
 
 .MenuListGame .buy span {
   align-items: center;
   font-size: 1.7vw;
   text-align: center;
-  color: var(--text-light);
+  color: black;
 }
 
-.MenuListGame .name {
-  align-items: center;
-  font-size: 2vw;
-  text-align: center;
-  color: var(--text-light);
-}
+
 
 .MenuListGame .details {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: bottom;
+  color: white;
 }
 

@@ -22,9 +22,11 @@ export default function NewOrderPage({ user, setUser }) {
   useEffect(function() {
     async function getGames() {
       const games = await gamesAPI.getAll();
-      genresRef.current = [...new Set(games.map(game => game.genre.name))];
+      let temp = games.map(game => game.genre.name)
+      temp.push("All")
+      genresRef.current = [...new Set(temp)];
       setMenuGames(games);
-      setActiveGen(genresRef.current[0]);
+      setActiveGen(genresRef.current[genresRef.current.length - 1]);
       setActivePlat({name: "All"});
     }
     getGames();
@@ -67,7 +69,7 @@ export default function NewOrderPage({ user, setUser }) {
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       <MenuList
-        menuGames={menuGames.filter(game => game.genre.name === activeGen).filter(game => game.platforms.includes(activePlat.name))}
+        menuGames={menuGames.filter(game => (game.genre.name === activeGen || activeGen === "All")).filter(game => game.platforms.includes(activePlat.name))}
         handleAddToOrder={handleAddToOrder}
       />
       <OrderDetail

@@ -6,6 +6,7 @@
 }
 
 .GenreList li {
+  color: black;
   padding: .6vmin;
   text-align: center;
   border-radius: .5vmin;
@@ -13,13 +14,13 @@
 }
     
 .GenreList li:hover:not(.active) {
-  cursor: pointer;
-  background-color: var(--orange);
+  cursor: zoom-in;
+  background-color: red;
   color: var(--white);
 }
 
 .GenreList li.active {
-  color: var(--text-dark);
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  color: white;
+  background-color: black;
+  border: .25vmin solid red;
 }

@@ -5,7 +5,8 @@ const gameSchema = new Schema({
   platforms: [{ type: String, required: true}],
   genre: { type: Schema.Types.ObjectId, ref: 'Genre' },
   price: { type: Number, required: true, default: 59.99 },
-  developer: {type : String, required: true}
+  developer: {type : String, required: true},
+  image: {type : String, required: false}
 }, {
   timestamps: true
 });
